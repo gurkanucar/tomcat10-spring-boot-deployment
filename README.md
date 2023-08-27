@@ -73,6 +73,11 @@ sudo systemctl enable tomcat
 sudo ufw allow 8080
 ```
 
+
+![img.png](images/img3.png)
+
+
+
 ### Add user to tomcat
 ```shell
 sudo nano /opt/tomcat/conf/tomcat-users.xml
