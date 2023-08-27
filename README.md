@@ -1,3 +1,4 @@
+### Medium Link : [https://medium.com/@gurkanucar/tomcat10-spring-boot-3-java-17-deployment-on-ubuntu-server-a3420c4f431f](https://medium.com/@gurkanucar/tomcat10-spring-boot-3-java-17-deployment-on-ubuntu-server-a3420c4f431f)
 
 ### Create a ubuntu server from linode
 
