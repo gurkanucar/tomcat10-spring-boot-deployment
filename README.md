@@ -1,3 +1,16 @@
+
+### Create a ubuntu server from linode
+
+![img.png](images/linode1.png)
+
+![img.png](images/linode2.png)
+
+### connect to your server over ssh
+
+```shell
+ssh root@<IP_ADDRESS>
+```
+
 ### Allow ssh and update
 
 ```shell
@@ -174,4 +187,6 @@ mvn clean package
 
 
 
+### resources
 
+- https://phoenixnap.com/kb/install-tomcat-ubuntu
