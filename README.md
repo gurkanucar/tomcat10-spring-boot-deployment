@@ -65,6 +65,8 @@ Restart=always
 WantedBy=multi-user.target
 ```
 
+### start tomcat
+
 ```shell
 sudo systemctl daemon-reload
 sudo systemctl start tomcat
@@ -119,6 +121,56 @@ sudo systemctl restart tomcat
 
 
 
+### !IMPORTANT - Deploy Java 17 Spring-Boot 3.1 Application
+
+#### 1 -  To deploy our spring boot application we have to extend `SpringBootServletInitializer`. Extending it in Spring Boot allows the application to be deployed as a WAR on external servlet containers.
+
+```java
+@SpringBootApplication
+public class SpringBootDemoApplication extends SpringBootServletInitializer {
+
+  public static void main(String[] args) {
+    SpringApplication.run(SpringBootDemoApplication.class, args);
+  }
+}
+
+```
+
+#### 2 - Update packaging type to `war` and specify build final name.
+
+```xml
+    <name>spring-boot-demo</name>
+    <description>spring-boot-demo</description>
+    <!-- here -->
+    <packaging>war</packaging>
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+
+    ..........
+    
+    <build>
+        <finalName>spring-boot-demo</finalName>
+        <plugins>
+    .........
+```
+
+#### 3 - Run the following command to build your project:
+
+```shell
+mvn clean package
+```
+
+#### 4 - Open tomcat manager `<IP>:8080/manager/html` and deploy your war file 
+
+![img.png](images/img5.png)
+
+
+# Congrats!
+
+![img.png](images/img7.png)
+
+![img.png](images/img6.png)
 
 
 
